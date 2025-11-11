@@ -2586,3 +2586,10 @@ input, select, textarea {
     transform: rotate(-45deg) translate(5px, -6px);
   }
 }
+
+	/* ✅ Ensure image/content does not touch nav */
+	body.is-preload article,
+	body article,
+	#top {
+	padding-top: 70px; /* enough space below nav */
+	}
