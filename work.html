@@ -4,9 +4,14 @@
     <title>Work Experience | M Manoj Kumar</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Shared styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <style>
+      /* Page-specific styling only */
+
       html, body {
         margin: 0;
         padding: 0;
@@ -53,30 +58,26 @@
       .experience-card {
         display: flex;
         align-items: center;
-        background: #f1f3f5; /* soft grey background */
+        background: #f1f3f5;
         border-radius: 0.8em;
         border: 1px solid #d0d4d9;
         padding: 1.5em 1.8em;
         margin-bottom: 2em;
-        transition: all 0.25s ease;
+        transition: 0.25s ease;
       }
 
       .experience-card:hover {
-        background: #e5e7ea; /* slightly darker grey */
+        background: #e5e7ea;
         border-color: #c2c6ca;
       }
 
       /* Left Section */
       .exp-left {
         flex: 0 0 240px;
-        background: #e2e5e8; /* inner contrast grey box */
+        background: #e2e5e8;
         border-radius: 0.6em;
         padding: 1em;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
       }
 
       .exp-left img {
@@ -91,30 +92,44 @@
         font-size: 1em;
         font-weight: 600;
         margin: 0.2em 0;
-        color: #111;
       }
 
       .exp-left p {
         font-size: 0.88em;
-        color: #333;
         margin: 0;
-        line-height: 1.3em;
+        color: #333;
       }
 
       /* Right Section */
       .exp-right {
         flex: 1;
         padding-left: 2em;
-        display: flex;
-        align-items: center;
       }
 
       .exp-right ul {
-        margin: 0;
         padding-left: 1.2em;
+        margin: 0;
         color: #222;
         font-size: 0.95em;
         line-height: 1.6em;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .experience-card {
+          flex-direction: column;
+          text-align: center;
+        }
+        .exp-left {
+          width: 100%;
+          margin-bottom: 1.3em;
+        }
+        .exp-right {
+          padding-left: 0;
+        }
+        .exp-right ul {
+          text-align: left;
+        }
       }
 
       /* Social Bar */
@@ -122,21 +137,20 @@
         background: #0b0c10;
         padding: 1em 0;
         text-align: center;
-        width: 100%;
       }
 
       #social-bar ul {
         list-style: none;
         display: inline-flex;
         gap: 1.5em;
-        margin: 0;
         padding: 0;
+        margin: 0;
       }
 
       #social-bar a {
         color: #ffffff;
         font-size: 1.4em;
-        transition: color 0.3s ease, transform 0.3s ease;
+        transition: 0.3s ease;
       }
 
       #social-bar a:hover {
@@ -156,51 +170,37 @@
         bottom: 1.5em;
         left: 1.5em;
         background: #007bff;
-        color: #fff;
-        border-radius: 50%;
+        color: white;
         width: 50px;
         height: 50px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.3em;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         text-decoration: none;
-        transition: background 0.3s ease, transform 0.3s ease;
-        z-index: 1000;
+        transition: 0.3s ease;
+        z-index: 999;
       }
 
       #home-btn:hover {
         background: #0056b3;
         transform: scale(1.1);
       }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .experience-card {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        .exp-left {
-          width: 100%;
-          margin-bottom: 1.5em;
-        }
-        .exp-right {
-          padding-left: 0;
-          justify-content: center;
-        }
-        .exp-right ul {
-          text-align: left;
-        }
-      }
     </style>
   </head>
 
   <body class="is-preload">
 
-    <!-- Navigation -->
+    <!-- ✅ Navigation (same as index/personal/education) -->
     <nav id="nav">
+      <div id="menu-toggle" class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="container">
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Experience</a></li>
@@ -227,8 +227,8 @@
         <div class="exp-right">
           <ul>
             <li>Developed real-time stalled vehicle detection using YOLO and DeepStream.</li>
-            <li>Implemented License Plate Recognition and RabbitMQ-based alert systems.</li>
-            <li>Built end-to-end surveillance automation pipelines.</li>
+            <li>Implemented License Plate Recognition with alert automation.</li>
+            <li>Built end-to-end surveillance pipelines with message queues.</li>
           </ul>
         </div>
       </div>
@@ -243,9 +243,9 @@
         </div>
         <div class="exp-right">
           <ul>
-            <li>Created NLP pipelines using LLMs for financial document automation.</li>
+            <li>Created NLP pipelines for financial document automation.</li>
             <li>Improved accuracy to 91% and reduced processing time by 90%.</li>
-            <li>Developed RAG-based financial data chatbot.</li>
+            <li>Developed RAG-based financial data intelligence chatbot.</li>
           </ul>
         </div>
       </div>
@@ -261,8 +261,8 @@
         <div class="exp-right">
           <ul>
             <li>Validated credit models using KS, GINI, PSI, and CSI metrics.</li>
-            <li>Built AI chatbot for sales support using LangGraph and RAG.</li>
-            <li>Automated document validation with SharePoint events.</li>
+            <li>Built AI chatbot for sales support using RAG and conversational flows.</li>
+            <li>Automated document processing using SharePoint events.</li>
           </ul>
         </div>
       </div>
@@ -277,7 +277,7 @@
         </div>
         <div class="exp-right">
           <ul>
-            <li>Used Gradient Boosting and DBSCAN clustering to forecast ATM relocations.</li>
+            <li>Used Gradient Boosting and DBSCAN to forecast ATM relocation needs.</li>
             <li>Reduced operational cost by 6% and increased transactions by 22%.</li>
           </ul>
         </div>
@@ -287,10 +287,10 @@
     <!-- Social Bar -->
     <section id="social-bar">
       <ul>
-        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
-        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
-        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
-        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github"></a></li>
       </ul>
       <p>© 2025 M Manoj Kumar | AI Engineer</p>
     </section>
@@ -299,5 +299,22 @@
     <a href="index.html" id="home-btn" title="Back to Home">
       <i class="fa-solid fa-house"></i>
     </a>
+
+    <!-- ✅ Unified toggle JS -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.querySelector("#nav ul");
+
+      window.addEventListener("load", () => {
+        menuToggle.classList.remove("active");
+        navMenu.classList.remove("open");
+      });
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+
   </body>
 </html>

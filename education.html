@@ -4,18 +4,23 @@
     <title>Education | M Manoj Kumar</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Shared global CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
     <style>
+      /* ✅ Page-specific styling only */
+
       html, body {
         margin: 0;
         padding: 0;
         height: 100%;
-        overflow-x: hidden;
         font-family: "Inter", sans-serif;
         color: #222;
         background: #f8f9fb;
+        overflow-x: hidden;
       }
 
       body {
@@ -56,16 +61,16 @@
       .edu-card {
         background: #fff;
         border-radius: 0.8em;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
         padding: 1.5em;
         width: 22%;
         text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: 0.3s ease;
       }
 
       .edu-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.12);
       }
 
       .edu-card img {
@@ -79,14 +84,12 @@
       .edu-card h3 {
         font-size: 1.05em;
         margin-bottom: 0.4em;
-        font-weight: 600;
       }
 
       .edu-card p {
         font-size: 0.9em;
         color: #555;
         line-height: 1.5em;
-        margin: 0;
       }
 
       /* Publications */
@@ -99,7 +102,6 @@
       #publications h2 {
         text-align: center;
         font-size: 1.8em;
-        font-weight: 600;
         margin-bottom: 1.5em;
       }
 
@@ -117,8 +119,8 @@
 
       #publications a {
         color: #007bff;
-        text-decoration: none;
         font-weight: 500;
+        text-decoration: none;
       }
 
       #publications a:hover {
@@ -144,18 +146,12 @@
       #social-bar a {
         color: #ffffff;
         font-size: 1.4em;
-        transition: color 0.3s ease, transform 0.3s ease;
+        transition: 0.3s ease;
       }
 
       #social-bar a:hover {
         color: #007bff;
         transform: scale(1.2);
-      }
-
-      #social-bar p {
-        color: #aaa;
-        font-size: 0.85em;
-        margin-top: 0.8em;
       }
 
       /* Floating Home Button */
@@ -172,9 +168,9 @@
         align-items: center;
         justify-content: center;
         font-size: 1.3em;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         text-decoration: none;
-        transition: background 0.3s ease, transform 0.3s ease;
+        transition: 0.3s ease;
         z-index: 1000;
       }
 
@@ -183,7 +179,7 @@
         transform: scale(1.1);
       }
 
-      /* Responsive */
+      /* Responsive cards */
       @media (max-width: 1024px) {
         .edu-card {
           width: 45%;
@@ -197,10 +193,17 @@
       }
     </style>
   </head>
+
   <body class="is-preload">
 
-    <!-- Navigation -->
+    <!-- ✅ Shared Navigation -->
     <nav id="nav">
+      <div id="menu-toggle" class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="container">
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Experience</a></li>
@@ -253,9 +256,10 @@
           </a><br>
           <em>Journal of Intelligent Manufacturing Systems, Taylor & Francis, 2022.</em>
         </li>
+
         <li>
           <strong>Berth and Quay Crane Allocation Problem for the Container Handling</strong><br>
-          <em>5th International Conference on Industrial Engineering (ICIE 2019), SVNIT Surat · Dec 14, 2019</em><br>
+          <em>5th International Conference on Industrial Engineering (ICIE 2019), SVNIT Surat · Dec 14, 2019</em>
         </li>
       </ul>
     </section>
@@ -263,10 +267,10 @@
     <!-- Social Bar -->
     <section id="social-bar">
       <ul>
-        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
-        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
-        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
-        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github"></a></li>
       </ul>
       <p>© 2025 M Manoj Kumar | AI Engineer</p>
     </section>
@@ -276,7 +280,21 @@
       <i class="fa-solid fa-house"></i>
     </a>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- ✅ Unified toggle script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.querySelector("#nav ul");
+
+      window.addEventListener("load", () => {
+        menuToggle.classList.remove("active");
+        navMenu.classList.remove("open");
+      });
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+
   </body>
 </html>

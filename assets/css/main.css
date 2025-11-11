@@ -2444,134 +2444,145 @@ input, select, textarea {
 
 	}
 
-	/* === Custom Enhancements for Manoj Portfolio === */
-
-/* 1. Equal-height cards for work and education */
-.box.style1, .box.style2 {
-	min-height: 420px; /* you can tweak this */
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	text-align: left;
-}
-
-.box.style1 img {
-	width: 100%;
-	height: 180px;
-	object-fit: cover;
-	border-radius: 10px;
-	margin-bottom: 1em;
-}
-
-/* Equal height for education boxes too */
-.wrapper .box.style2 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 300px;
-}
-
-/* 2. Mobile navigation fix (prevent wrapping/hiding) */
-#nav ul.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-	gap: 0.3em;
-}
-
-#nav li {
-	margin: 0;
-	padding: 0;
-}
-
-@media screen and (max-width: 768px) {
-	#nav {
-		height: auto;
-		line-height: normal;
-		padding: 0.5em 0;
-	}
-	#nav ul.container {
-		flex-direction: column;
-	}
-	#nav a {
-		display: block;
-		padding: 0.6em 1em;
-	}
-}
-
-/* 3. Footer social icons alignment (same on all pages) */
-footer .social {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 0.5em;
-}
-
-/* 4. Consistent page spacing */
-.wrapper {
-	padding: 6em 0;
-}
-
-/* 5. Subtle hover lift for work/education cards */
-.box.style1:hover, .box.style2:hover {
-	transform: translateY(-6px);
-	transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-/* --- Hero Section Polishing --- */
-#top {
-  padding: 6em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-#top .container {
-  max-width: 1100px;
-}
-
-#top h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.3em;
-}
-
-#top p {
-  font-size: 1.2em;
-  color: #666;
-  line-height: 1.6em;
-  margin-bottom: 1.5em;
-}
-
-#top .button.large {
-  font-size: 1em;
-  padding: 0.9em 2em;
-}
-
-#top .image img {
-  border-radius: 50%;
-  max-width: 280px;
-  height: 280px;
-  object-fit: cover;
-}
-
-/* Hover polish for quick link boxes */
-#overview .box {
-  transition: all 0.3s ease-in-out;
+	#menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 2em;
   cursor: pointer;
+  padding: 0 .5em;
+}
+/* Mobile Responsive Menu */
+@media screen and (max-width: 736px) {
+
+  /* stylish toggle */
+  #menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  #menu-toggle.toggle {
+    width: 35px;
+    height: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+	#menu-toggle.toggle span {
+	background: rgba(255, 255, 255, 0.45);   /* translucent */
+	backdrop-filter: blur(6px);              /* glass effect */
+	-webkit-backdrop-filter: blur(6px);
+	height: 3px;
+	width: 100%;
+	border-radius: 2px;
+	transition: 0.3s ease;
+	}
+
+	#menu-toggle.toggle:hover span {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+		}
+
+
+  /* hide menu initially */
+  #nav ul {
+    display: none;
+    background: #282828;
+    padding-bottom: 1em;
+  }
+
+  /* show menu when opened */
+  #nav ul.open {
+    display: block;
+  }
+
+  /* make items vertical */
+  #nav li {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  /* animated X state */
+  #nav ul.open ~ #menu-toggle.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  #nav ul.open ~ #menu-toggle.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #nav ul.open ~ #menu-toggle.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 }
 
-#overview .box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: #fdfdfd;
+#menu-toggle {
+  display: none;
 }
 
+/* ------------------------------------------------------- */
+/* MOBILE NAVIGATION HAMBURGER MENU (GLOBAL)               */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 736px) {
 
+  /* Hamburger container */
+  #menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    position: absolute;
+    right: 1em;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  /* Hamburger bars */
+  #menu-toggle span {
+    background: #ffffff !important;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+  /* Hidden menu by default */
+  #nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 1em;
+    background: #282828;
+    text-align: center;
+  }
+
+  /* Show menu when open */
+  #nav ul.open {
+    display: flex;
+  }
+
+  #nav li {
+    display: block;
+    margin: 0.6em 0;
+  }
+
+  /* Hamburger → X animation */
+  #menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  #menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}

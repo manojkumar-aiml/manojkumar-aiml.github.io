@@ -4,10 +4,14 @@
     <title>Manoj | AI Engineer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Global shared CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <style>
-      /* Reset default spacing */
+      /* ✅ Only page-specific styling here */
+
       html, body {
         margin: 0;
         padding: 0;
@@ -23,7 +27,6 @@
         background-color: #f8f9fb;
       }
 
-      /* Push footer to bottom */
       #social-bar {
         margin-top: auto;
       }
@@ -41,17 +44,15 @@
         color: #222;
       }
 
-      /* Grid layout with spacing */
-      #overview .journey-grid {
+      .journey-grid {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 3em;
       }
 
-      /* Card style */
-      #overview .journey-card {
-        background: #e9ecef; /* soft grey background for harmony */
+      .journey-card {
+        background: #e9ecef;
         border-radius: 1em;
         padding: 2em 1.5em;
         width: 230px;
@@ -62,13 +63,12 @@
         color: #222;
       }
 
-      #overview .journey-card:hover {
+      .journey-card:hover {
         transform: translateY(-6px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       }
 
-      /* Icon design */
-      #overview .journey-card .icon {
+      .journey-card .icon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -81,74 +81,52 @@
         transition: transform 0.3s ease;
       }
 
-      #overview .journey-card:hover .icon {
+      .journey-card:hover .icon {
         transform: scale(1.1);
       }
 
-      /* Section-specific icon colors */
       .icon.work { background: #007bff; }
       .icon.education { background: #5c636a; }
       .icon.personal { background: #17a2b8; }
-
-      #overview .journey-card h3 {
-        font-size: 1.15em;
-        margin-bottom: 0.5em;
-      }
-
-      #overview .journey-card p {
-        font-size: 0.9em;
-        color: #444;
-        line-height: 1.5em;
-      }
 
       /* Social Bar */
       #social-bar {
         background: #0b0c10;
         padding: 1em 0;
         text-align: center;
-        width: 100%;
       }
 
       #social-bar ul {
         list-style: none;
         display: inline-flex;
         gap: 1.5em;
-        margin: 0;
         padding: 0;
+        margin: 0;
       }
 
       #social-bar a {
-        color: #ffffff;
+        color: white;
         font-size: 1.4em;
-        transition: color 0.3s ease, transform 0.3s ease;
+        transition: 0.3s ease;
       }
 
       #social-bar a:hover {
         color: #007bff;
         transform: scale(1.2);
       }
-
-      #social-bar p {
-        color: #aaa;
-        font-size: 0.85em;
-        margin-top: 0.8em;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        #overview .journey-grid {
-          gap: 1.5em;
-        }
-        #overview .journey-card {
-          width: 80%;
-        }
-      }
     </style>
   </head>
 
   <body class="is-preload">
-    <!-- Nav -->
+
+    <!-- ✅ Shared Navigation -->
     <nav id="nav">
+      <div id="menu-toggle" class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="container">
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Experience</a></li>
@@ -162,8 +140,11 @@
       <div class="container">
         <div class="row">
           <div class="col-4 col-5-large col-12-medium">
-            <span class="image fit"><img src="images/manoj.jpg" alt="Profile" /></span>
+            <span class="image fit">
+              <img src="images/manoj.jpg" alt="Profile" />
+            </span>
           </div>
+
           <div class="col-8 col-7-large col-12-medium">
             <header>
               <h1>Hi, I'm <strong>Manoj</strong>.</h1>
@@ -177,10 +158,11 @@
       </div>
     </article>
 
-    <!-- Explore My Journey -->
+    <!-- Journey -->
     <section id="overview">
       <div class="container">
         <h2>Explore My Journey</h2>
+
         <div class="journey-grid">
 
           <a href="work.html" class="journey-card">
@@ -208,15 +190,33 @@
     <!-- Social Bar -->
     <section id="social-bar">
       <ul>
-        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
-        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
-        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
-        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github"></a></li>
       </ul>
       <p>© 2025 M Manoj Kumar | AI Engineer</p>
     </section>
 
     <script src="assets/js/jquery.min.js"></script>
+
+    <!-- ✅ Unified Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.querySelector("#nav ul");
+
+      window.addEventListener("load", () => {
+        menuToggle.classList.remove("active");
+        navMenu.classList.remove("open");
+      });
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+
     <script src="assets/js/main.js"></script>
+
   </body>
 </html>
