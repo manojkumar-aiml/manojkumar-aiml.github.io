@@ -8,6 +8,28 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Ensure uniform height for experience & education boxes */
+			.box.style1, .box.style2 {
+				min-height: 420px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				text-align: left;
+			}
+			.box.style1 img {
+				width: 100%;
+				height: 180px;
+				object-fit: cover;
+				border-radius: 10px;
+				margin-bottom: 1em;
+			}
+			.box.style2 {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -33,7 +55,7 @@
 						<header>
 							<h1>Hi, I'm <strong>M Manoj Kumar</strong>.</h1>
 						</header>
-						<p>I'm an <strong>AI Engineer</strong> and <strong>Data Scientist</strong> specializing in building end-to-end AI/ML solutions — from NLP-driven chatbots to real-time computer vision systems. I’m passionate about creating intelligent automation and scalable AI architectures.</p>
+						<p>I'm an <strong>AI Engineer</strong> specializing in building end-to-end AI/ML solutions — from NLP-driven chatbots to real-time computer vision systems. I’m passionate about creating intelligent automation and scalable AI architectures.</p>
 						<a href="#work" class="button large scrolly">View My Work Experience</a>
 					</div>
 				</div>
@@ -45,59 +67,57 @@
 			<div class="container">
 				<header>
 					<h2>Professional Experience</h2>
-					<p>Designing and deploying intelligent systems across industries.</p>
+					<p>Developing and deploying intelligent AI systems across industries.</p>
 				</header>
 
 				<div class="row aln-center">
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
-							<span class="icon featured fa-brain"></span>
+							<img src="images/pic01.jpg" alt="Centific Project" />
 							<h3>Artificial Intelligence Engineer — Centific</h3>
 							<p><strong>Dec 2024 – Present | Hyderabad, India</strong></p>
 							<ul>
-								<li>Built real-time stalled vehicle detection using <strong>YOLO</strong> and <strong>NVIDIA DeepStream</strong> on RTSP feeds.</li>
-								<li>Implemented <strong>License Plate Recognition (LPR)</strong> for unattended vehicle classification.</li>
-								<li>Integrated <strong>RabbitMQ</strong> and developed APIs for alert and officer validation workflow.</li>
-								<li>Designed a complete surveillance pipeline from detection to alerting.</li>
+								<li>Built real-time stalled vehicle detection using YOLO and NVIDIA DeepStream.</li>
+								<li>Implemented License Plate Recognition (LPR) and integrated RabbitMQ alerts.</li>
+								<li>Designed end-to-end surveillance workflow from detection to validation.</li>
 							</ul>
 						</section>
 					</div>
 
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
-							<span class="icon featured fa-robot"></span>
+							<img src="images/pic02.jpg" alt="FactSet Project" />
 							<h3>Machine Learning Engineer — FactSet</h3>
 							<p><strong>June 2023 – Dec 2024 | Hyderabad, India</strong></p>
 							<ul>
-								<li>Built a two-stage NLP pipeline for M&A document processing using <strong>LLMs</strong>.</li>
-								<li>Achieved 91% accuracy (English) and 86% (Non-English), reducing manual effort drastically.</li>
-								<li>Developed a <strong>RAG-based chatbot</strong> for financial data annotation and query automation.</li>
-								<li>Reduced processing time from 40s to under 4s per document via optimized pipelines.</li>
+								<li>Developed NLP pipeline for M&A documents using Large Language Models.</li>
+								<li>Achieved 91% accuracy and cut processing time from 40s to under 4s.</li>
+								<li>Built RAG-based chatbot to automate financial annotation queries.</li>
 							</ul>
 						</section>
 					</div>
 
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
-							<span class="icon featured fa-chart-line"></span>
+							<img src="images/pic03.jpg" alt="Synchrony Project" />
 							<h3>Data Science Intern — Synchrony</h3>
 							<p><strong>Jan 2023 – June 2023 | Bangalore, India</strong></p>
 							<ul>
-								<li>Validated credit risk and scorecard models using metrics like <strong>KS, GINI, PSI, CSI</strong>.</li>
-								<li>Built an internal <strong>AI chatbot</strong> for sales support and product knowledge.</li>
-								<li>Integrated SharePoint document events with <strong>RAG and LangGraph</strong> for automated responses.</li>
+								<li>Validated credit scorecard models using KS, GINI, PSI, CSI metrics.</li>
+								<li>Built internal AI chatbot for sales support using LangGraph and RAG.</li>
+								<li>Integrated SharePoint automation for intelligent document handling.</li>
 							</ul>
 						</section>
 					</div>
 
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
-							<span class="icon featured fa-database"></span>
+							<img src="images/pic04.jpg" alt="HSBC Project" />
 							<h3>Data Science Intern — HSBC Bank</h3>
 							<p><strong>Aug 2022 – Dec 2022 | Hyderabad, India</strong></p>
 							<ul>
-								<li>Used <strong>Gradient Boosting</strong> and <strong>DBSCAN clustering</strong> to forecast ATM closures and relocation.</li>
-								<li>Enabled cost reduction of 6% and transaction growth of 22% through ML-driven insights.</li>
+								<li>Forecasted ATM relocations using Gradient Boosting and DBSCAN clustering.</li>
+								<li>Helped reduce costs by 6% and increase transactions by 22% through ML insights.</li>
 							</ul>
 						</section>
 					</div>
@@ -114,7 +134,7 @@
 			<div class="container">
 				<header>
 					<h2>Education</h2>
-					<p>Building a foundation in statistics, computing, and data-driven intelligence.</p>
+					<p>Building a strong foundation in mathematics, engineering, and AI-driven analytics.</p>
 				</header>
 
 				<div class="row aln-center">
@@ -126,8 +146,8 @@
 					</div>
 					<div class="col-6 col-12-medium">
 						<article class="box style2">
-							<h3><a href="#">B.Tech in Computer Science and Engineering</a></h3>
-							<p><strong>IIIT Jabalpur (2017 – 2021)</strong><br>Graduated with <strong>7.3/10 CGPA</strong>. Gained strong foundations in algorithms, programming, and machine learning.</p>
+							<h3><a href="#">B.Tech in Mechanical Engineering</a></h3>
+							<p><strong>IIIT Jabalpur (2017 – 2021)</strong><br>Graduated with <strong>7.3/10 CGPA</strong>. Gained strong foundations in mechanical systems, computational modeling, and problem-solving through applied engineering.</p>
 						</article>
 					</div>
 				</div>
@@ -143,28 +163,28 @@
 			<div class="container">
 				<header>
 					<h2>Personal Life</h2>
-					<p>When I’m not coding, I’m exploring creativity, travel, and continuous learning.</p>
+					<p>When I’m not engineering AI systems, I’m exploring creativity and lifelong learning.</p>
 				</header>
 				<div class="row aln-center">
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-camera"></span>
 							<h3>Travel & Photography</h3>
-							<p>I love capturing the world through my camera — from urban landscapes to nature trails.</p>
+							<p>I love exploring new cultures and capturing stories through my camera lens.</p>
 						</section>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-book"></span>
 							<h3>Continuous Learning</h3>
-							<p>I enjoy reading about AI research, cognitive science, and creative problem-solving.</p>
+							<p>I enjoy studying new AI research, applied statistics, and cognitive science topics.</p>
 						</section>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-music"></span>
-							<h3>Music</h3>
-							<p>Music keeps me grounded — from ambient soundscapes to energetic instrumentals.</p>
+							<h3>Music & Creativity</h3>
+							<p>Music inspires my work — it keeps me focused and helps me think creatively.</p>
 						</section>
 					</div>
 				</div>
@@ -179,7 +199,7 @@
 			<div class="container medium">
 				<header>
 					<h2>Connect With Me</h2>
-					<p>Let’s collaborate, share ideas, or just talk about AI and innovation.</p>
+					<p>Let’s collaborate, share ideas, or discuss the future of AI.</p>
 				</header>
 				<div class="row">
 					<div class="col-12">
