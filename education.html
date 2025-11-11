@@ -1,112 +1,282 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M Manoj Kumar - Education</title>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Education | M Manoj Kumar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+        font-family: "Inter", sans-serif;
+        color: #222;
+        background: #f8f9fb;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      #social-bar {
+        margin-top: auto;
+      }
+
+      /* Education Section */
+      #education {
+        padding: 4em 2em 2em;
+        text-align: center;
+      }
+
+      #education header h2 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 0.4em;
+      }
+
+      #education header p {
+        color: #666;
+        font-size: 1em;
+        margin-bottom: 3em;
+      }
+
+      .education-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5em;
+      }
+
+      .edu-card {
+        background: #fff;
+        border-radius: 0.8em;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        padding: 1.5em;
+        width: 22%;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .edu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+      }
+
+      .edu-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 0.6em;
+        margin-bottom: 1em;
+      }
+
+      .edu-card h3 {
+        font-size: 1.05em;
+        margin-bottom: 0.4em;
+        font-weight: 600;
+      }
+
+      .edu-card p {
+        font-size: 0.9em;
+        color: #555;
+        line-height: 1.5em;
+        margin: 0;
+      }
+
+      /* Publications */
+      #publications {
+        max-width: 900px;
+        margin: 3em auto 4em;
+        padding: 0 1em;
+      }
+
+      #publications h2 {
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 1.5em;
+      }
+
+      #publications ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #publications li {
+        margin-bottom: 1.2em;
+        line-height: 1.6em;
+        color: #333;
+      }
+
+      #publications a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      #publications a:hover {
+        text-decoration: underline;
+      }
+
+      /* Social Bar */
+      #social-bar {
+        background: #0b0c10;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      #social-bar ul {
+        list-style: none;
+        display: inline-flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+
+      #social-bar a {
+        color: #ffffff;
+        font-size: 1.4em;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      #social-bar a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+      }
+
+      #social-bar p {
+        color: #aaa;
+        font-size: 0.85em;
+        margin-top: 0.8em;
+      }
+
+      /* Floating Home Button */
+      #home-btn {
+        position: fixed;
+        bottom: 1.5em;
+        left: 1.5em;
+        background: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      #home-btn:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .edu-card {
+          width: 45%;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .edu-card {
+          width: 80%;
         }
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #007BFF;
-        }
-        nav a.active {
-            color: #007BFF;
-            border-bottom: 2px solid #007BFF;
-        }
-        section {
-            padding: 20px;
-            background-color: white;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-        h2 {
-            color: #333;
-        }
-        h3 {
-            color: #007BFF;
-            margin-bottom: 5px;
-        }
-        .institution {
-            font-style: italic;
-            color: #333;
-        }
-        .date {
-            float: right;
-            color: #888;
-            font-size: 0.9em;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin: 10px 0;
-        }
+      }
     </style>
-</head>
-<body>
-    <header>
-        <h1>M Manoj Kumar - Education</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="career.html">Career</a>
-        <a href="education.html" class="active">Education</a>
-        <a href="personal.html">Personal</a>
-        <a href="contact.html">Contact</a>
+  </head>
+  <body class="is-preload">
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="personal.html">Personal</a></li>
+      </ul>
     </nav>
-    <section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <header>
         <h2>Education</h2>
-        <ul>
-            <li>
-                <h3>
-                    Master of Science in Statistics <span class="date">2021 - 2023</span>
-                </h3>
-                <p class="institution">University of Hyderabad, India - 8.85/10</p>
-            </li>
-            <li>
-                <h3>
-                    Bachelor of Technology in [Specialization] <span class="date">2017 - 2021</span>
-                </h3>
-                <p class="institution">IIIT, Jabalpur, India - 7.3/10</p>
-            </li>
-            <li>
-                <h3>
-                    Class 12 (CBSE) <span class="date">2017</span>
-                </h3>
-                <p class="institution">Sri Satya Sai Higher Secondary School - 95.2%</p>
-            </li>
-            <li>
-                <h3>
-                    Class 10 (CBSE) <span class="date">2015</span>
-                </h3>
-                <p class="institution">Aditya Birla Public School - 10 CGPA</p>
-            </li>
-        </ul>
+        <p>Building a foundation in mathematics, engineering, and AI analytics.</p>
+      </header>
+
+      <div class="education-row">
+        <div class="edu-card">
+          <img src="images/uoh.jpg" alt="University of Hyderabad">
+          <h3>M.Sc. in Statistics</h3>
+          <p><strong>University of Hyderabad (2021 – 2023)</strong></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/iiitdmj.jpg" alt="IIIT Jabalpur">
+          <h3>B.Tech in Mechanical Engineering</h3>
+          <p><strong>IIIT Jabalpur (2017 – 2021)</strong></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/ssshss.jpg" alt="Sri Satya Sai Higher Secondary School">
+          <h3>Class 12 — CBSE</h3>
+          <p><strong>Sri Satya Sai Higher Secondary School (2015 – 2017)</strong></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/abps.jpg" alt="The Aditya Birla Public School">
+          <h3>Class 10 — CBSE</h3>
+          <p><strong>The Aditya Birla Public School (2014 – 2015)</strong></p>
+        </div>
+      </div>
     </section>
-</body>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Research Publications</h2>
+      <ul>
+        <li>
+          <a href="https://www.tandfonline.com/doi/full/10.1080/17517575.2022.2028195" target="_blank">
+            A Data Analytic-based logistics modelling framework for E-commerce Enterprise
+          </a><br>
+          <em>Journal of Intelligent Manufacturing Systems, Taylor & Francis, 2022.</em>
+        </li>
+        <li>
+          <strong>Berth and Quay Crane Allocation Problem for the Container Handling</strong><br>
+          <em>5th International Conference on Industrial Engineering (ICIE 2019), SVNIT Surat · Dec 14, 2019</em><br>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Social Bar -->
+    <section id="social-bar">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+      </ul>
+      <p>© 2025 M Manoj Kumar | AI Engineer</p>
+    </section>
+
+    <!-- Floating Home Button -->
+    <a href="index.html" id="home-btn" title="Back to Home">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

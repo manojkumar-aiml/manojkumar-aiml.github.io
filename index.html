@@ -1,231 +1,222 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP (Modified for Manoj Kumar)
--->
 <html>
-	<head>
-		<title>M Manoj Kumar | AI Engineer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Ensure uniform height for experience & education boxes */
-			.box.style1, .box.style2 {
-				min-height: 420px;
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				text-align: left;
-			}
-			.box.style1 img {
-				width: 100%;
-				height: 180px;
-				object-fit: cover;
-				border-radius: 10px;
-				margin-bottom: 1em;
-			}
-			.box.style2 {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Manoj | AI Engineer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      /* Reset default spacing */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="container">
-				<li><a href="#top">Home</a></li>
-				<li><a href="#work">Experience</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#personal">Personal Life</a></li>
-				<li><a href="#contact">Connect</a></li>
-			</ul>
-		</nav>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        background-color: #f8f9fb;
+      }
 
-		<!-- Home -->
-		<article id="top" class="wrapper style1">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-5-large col-12-medium">
-						<span class="image fit"><img src="images/pic00.jpg" alt="Profile Photo" /></span>
-					</div>
-					<div class="col-8 col-7-large col-12-medium">
-						<header>
-							<h1>Hi, I'm <strong>M Manoj Kumar</strong>.</h1>
-						</header>
-						<p>I'm an <strong>AI Engineer</strong> specializing in building end-to-end AI/ML solutions — from NLP-driven chatbots to real-time computer vision systems. I’m passionate about creating intelligent automation and scalable AI architectures.</p>
-						<a href="#work" class="button large scrolly">View My Work Experience</a>
-					</div>
-				</div>
-			</div>
-		</article>
+      /* Push footer to bottom */
+      #social-bar {
+        margin-top: auto;
+      }
 
-		<!-- Work Experience -->
-		<article id="work" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Professional Experience</h2>
-					<p>Developing and deploying intelligent AI systems across industries.</p>
-				</header>
+      /* Section: Overview */
+      #overview {
+        background: #f8f9fb;
+        padding: 4em 0;
+      }
 
-				<div class="row aln-center">
-					<div class="col-6 col-12-medium">
-						<section class="box style1">
-							<img src="images/pic01.jpg" alt="Centific Project" />
-							<h3>Artificial Intelligence Engineer — Centific</h3>
-							<p><strong>Dec 2024 – Present | Hyderabad, India</strong></p>
-							<ul>
-								<li>Built real-time stalled vehicle detection using YOLO and NVIDIA DeepStream.</li>
-								<li>Implemented License Plate Recognition (LPR) and integrated RabbitMQ alerts.</li>
-								<li>Designed end-to-end surveillance workflow from detection to validation.</li>
-							</ul>
-						</section>
-					</div>
+      #overview h2 {
+        text-align: center;
+        margin-bottom: 2.5em;
+        font-size: 1.8em;
+        color: #222;
+      }
 
-					<div class="col-6 col-12-medium">
-						<section class="box style1">
-							<img src="images/pic02.jpg" alt="FactSet Project" />
-							<h3>Machine Learning Engineer — FactSet</h3>
-							<p><strong>June 2023 – Dec 2024 | Hyderabad, India</strong></p>
-							<ul>
-								<li>Developed NLP pipeline for M&A documents using Large Language Models.</li>
-								<li>Achieved 91% accuracy and cut processing time from 40s to under 4s.</li>
-								<li>Built RAG-based chatbot to automate financial annotation queries.</li>
-							</ul>
-						</section>
-					</div>
+      /* Grid layout with spacing */
+      #overview .journey-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3em;
+      }
 
-					<div class="col-6 col-12-medium">
-						<section class="box style1">
-							<img src="images/pic03.jpg" alt="Synchrony Project" />
-							<h3>Data Science Intern — Synchrony</h3>
-							<p><strong>Jan 2023 – June 2023 | Bangalore, India</strong></p>
-							<ul>
-								<li>Validated credit scorecard models using KS, GINI, PSI, CSI metrics.</li>
-								<li>Built internal AI chatbot for sales support using LangGraph and RAG.</li>
-								<li>Integrated SharePoint automation for intelligent document handling.</li>
-							</ul>
-						</section>
-					</div>
+      /* Card style */
+      #overview .journey-card {
+        background: #e9ecef; /* soft grey background for harmony */
+        border-radius: 1em;
+        padding: 2em 1.5em;
+        width: 230px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #222;
+      }
 
-					<div class="col-6 col-12-medium">
-						<section class="box style1">
-							<img src="images/pic04.jpg" alt="HSBC Project" />
-							<h3>Data Science Intern — HSBC Bank</h3>
-							<p><strong>Aug 2022 – Dec 2022 | Hyderabad, India</strong></p>
-							<ul>
-								<li>Forecasted ATM relocations using Gradient Boosting and DBSCAN clustering.</li>
-								<li>Helped reduce costs by 6% and increase transactions by 22% through ML insights.</li>
-							</ul>
-						</section>
-					</div>
-				</div>
+      #overview .journey-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
 
-				<footer>
-					<a href="#education" class="button large scrolly">Next: My Education</a>
-				</footer>
-			</div>
-		</article>
+      /* Icon design */
+      #overview .journey-card .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 1.6em;
+        margin-bottom: 1em;
+        transition: transform 0.3s ease;
+      }
 
-		<!-- Education -->
-		<article id="education" class="wrapper style3">
-			<div class="container">
-				<header>
-					<h2>Education</h2>
-					<p>Building a strong foundation in mathematics, engineering, and AI-driven analytics.</p>
-				</header>
+      #overview .journey-card:hover .icon {
+        transform: scale(1.1);
+      }
 
-				<div class="row aln-center">
-					<div class="col-6 col-12-medium">
-						<article class="box style2">
-							<h3><a href="#">M.Sc. in Statistics</a></h3>
-							<p><strong>University of Hyderabad (2021 – 2023)</strong><br>Graduated with <strong>8.85/10 CGPA</strong>. Focused on statistical modeling, predictive analytics, and data interpretation for AI systems.</p>
-						</article>
-					</div>
-					<div class="col-6 col-12-medium">
-						<article class="box style2">
-							<h3><a href="#">B.Tech in Mechanical Engineering</a></h3>
-							<p><strong>IIIT Jabalpur (2017 – 2021)</strong><br>Graduated with <strong>7.3/10 CGPA</strong>. Gained strong foundations in mechanical systems, computational modeling, and problem-solving through applied engineering.</p>
-						</article>
-					</div>
-				</div>
+      /* Section-specific icon colors */
+      .icon.work { background: #007bff; }
+      .icon.education { background: #5c636a; }
+      .icon.personal { background: #17a2b8; }
 
-				<footer>
-					<a href="#personal" class="button large scrolly">Learn About My Personal Life</a>
-				</footer>
-			</div>
-		</article>
+      #overview .journey-card h3 {
+        font-size: 1.15em;
+        margin-bottom: 0.5em;
+      }
 
-		<!-- Personal Life -->
-		<article id="personal" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Personal Life</h2>
-					<p>When I’m not engineering AI systems, I’m exploring creativity and lifelong learning.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured fa-camera"></span>
-							<h3>Travel & Photography</h3>
-							<p>I love exploring new cultures and capturing stories through my camera lens.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured fa-book"></span>
-							<h3>Continuous Learning</h3>
-							<p>I enjoy studying new AI research, applied statistics, and cognitive science topics.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured fa-music"></span>
-							<h3>Music & Creativity</h3>
-							<p>Music inspires my work — it keeps me focused and helps me think creatively.</p>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<a href="#contact" class="button large scrolly">Connect With Me</a>
-				</footer>
-			</div>
-		</article>
+      #overview .journey-card p {
+        font-size: 0.9em;
+        color: #444;
+        line-height: 1.5em;
+      }
 
-		<!-- Connect -->
-		<article id="contact" class="wrapper style4">
-			<div class="container medium">
-				<header>
-					<h2>Connect With Me</h2>
-					<p>Let’s collaborate, share ideas, or discuss the future of AI.</p>
-				</header>
-				<div class="row">
-					<div class="col-12">
-						<ul class="social">
-							<li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://www.instagram.com/mmanojkumar-data" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="mailto:mmanojkumar.data@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</div>
-				</div>
-				<footer>
-					<ul id="copyright">
-						<li>&copy; 2025 M Manoj Kumar. All rights reserved.</li>
-						<li>Design by <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
-			</div>
-		</article>
+      /* Social Bar */
+      #social-bar {
+        background: #0b0c10;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+      }
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+      #social-bar ul {
+        list-style: none;
+        display: inline-flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
 
-	</body>
+      #social-bar a {
+        color: #ffffff;
+        font-size: 1.4em;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      #social-bar a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+      }
+
+      #social-bar p {
+        color: #aaa;
+        font-size: 0.85em;
+        margin-top: 0.8em;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #overview .journey-grid {
+          gap: 1.5em;
+        }
+        #overview .journey-card {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="personal.html">Personal</a></li>
+      </ul>
+    </nav>
+
+    <!-- Intro -->
+    <article id="top" class="wrapper style1">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-5-large col-12-medium">
+            <span class="image fit"><img src="images/manoj.jpg" alt="Profile" /></span>
+          </div>
+          <div class="col-8 col-7-large col-12-medium">
+            <header>
+              <h1>Hi, I'm <strong>Manoj</strong>.</h1>
+            </header>
+            <p>
+              I'm an <strong>AI Engineer</strong> specializing in building end-to-end AI/ML solutions — from NLP-driven chatbots
+              to real-time computer vision systems. I’m passionate about creating intelligent automation and scalable AI architectures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Explore My Journey -->
+    <section id="overview">
+      <div class="container">
+        <h2>Explore My Journey</h2>
+        <div class="journey-grid">
+
+          <a href="work.html" class="journey-card">
+            <span class="icon work"><i class="fa-solid fa-robot"></i></span>
+            <h3>Work Experience</h3>
+            <p>Discover my AI engineering projects and professional milestones.</p>
+          </a>
+
+          <a href="education.html" class="journey-card">
+            <span class="icon education"><i class="fa-solid fa-graduation-cap"></i></span>
+            <h3>Education</h3>
+            <p>B.Tech in Mechanical Engineering and MSc in Statistics — a foundation for AI innovation.</p>
+          </a>
+
+          <a href="personal.html" class="journey-card">
+            <span class="icon personal"><i class="fa-solid fa-person-running"></i></span>
+            <h3>Personal Life</h3>
+            <p>Beyond work, I love fitness, photography, and creative design.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Bar -->
+    <section id="social-bar">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+      </ul>
+      <p>© 2025 M Manoj Kumar | AI Engineer</p>
+    </section>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

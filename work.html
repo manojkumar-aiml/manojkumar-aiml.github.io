@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Work Experience | M Manoj Kumar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+        font-family: "Inter", sans-serif;
+        background: #f8f9fb;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      #social-bar {
+        margin-top: auto;
+      }
+
+      /* Work Section */
+      #work {
+        padding: 4em 2em;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      #work header {
+        text-align: center;
+        margin-bottom: 3em;
+      }
+
+      #work header h2 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+      }
+
+      #work header p {
+        font-size: 1em;
+        color: #666;
+      }
+
+      /* Experience Card */
+      .experience-card {
+        display: flex;
+        align-items: center;
+        background: #f1f3f5; /* soft grey background */
+        border-radius: 0.8em;
+        border: 1px solid #d0d4d9;
+        padding: 1.5em 1.8em;
+        margin-bottom: 2em;
+        transition: all 0.25s ease;
+      }
+
+      .experience-card:hover {
+        background: #e5e7ea; /* slightly darker grey */
+        border-color: #c2c6ca;
+      }
+
+      /* Left Section */
+      .exp-left {
+        flex: 0 0 240px;
+        background: #e2e5e8; /* inner contrast grey box */
+        border-radius: 0.6em;
+        padding: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .exp-left img {
+        width: 130px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 0.5em;
+        margin-bottom: 0.8em;
+      }
+
+      .exp-left h3 {
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0.2em 0;
+        color: #111;
+      }
+
+      .exp-left p {
+        font-size: 0.88em;
+        color: #333;
+        margin: 0;
+        line-height: 1.3em;
+      }
+
+      /* Right Section */
+      .exp-right {
+        flex: 1;
+        padding-left: 2em;
+        display: flex;
+        align-items: center;
+      }
+
+      .exp-right ul {
+        margin: 0;
+        padding-left: 1.2em;
+        color: #222;
+        font-size: 0.95em;
+        line-height: 1.6em;
+      }
+
+      /* Social Bar */
+      #social-bar {
+        background: #0b0c10;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      #social-bar ul {
+        list-style: none;
+        display: inline-flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+
+      #social-bar a {
+        color: #ffffff;
+        font-size: 1.4em;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      #social-bar a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+      }
+
+      #social-bar p {
+        color: #aaa;
+        font-size: 0.85em;
+        margin-top: 0.8em;
+      }
+
+      /* Floating Home Button */
+      #home-btn {
+        position: fixed;
+        bottom: 1.5em;
+        left: 1.5em;
+        background: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      #home-btn:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .experience-card {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .exp-left {
+          width: 100%;
+          margin-bottom: 1.5em;
+        }
+        .exp-right {
+          padding-left: 0;
+          justify-content: center;
+        }
+        .exp-right ul {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="personal.html">Personal</a></li>
+      </ul>
+    </nav>
+
+    <!-- Work Experience Section -->
+    <section id="work">
+      <header>
+        <h2>Professional Experience</h2>
+        <p>Building and deploying intelligent systems for real-world impact.</p>
+      </header>
+
+      <!-- Centific -->
+      <div class="experience-card">
+        <div class="exp-left">
+          <img src="images/centific.jpg" alt="Centific" />
+          <h3>AI Engineer — Centific</h3>
+          <p>Dec 2024 – Present</p>
+          <p>Hyderabad, India</p>
+        </div>
+        <div class="exp-right">
+          <ul>
+            <li>Developed real-time stalled vehicle detection using YOLO and DeepStream.</li>
+            <li>Implemented License Plate Recognition and RabbitMQ-based alert systems.</li>
+            <li>Built end-to-end surveillance automation pipelines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FactSet -->
+      <div class="experience-card">
+        <div class="exp-left">
+          <img src="images/factset.jpg" alt="FactSet" />
+          <h3>Machine Learning Engineer — FactSet</h3>
+          <p>June 2023 – Dec 2024</p>
+          <p>Hyderabad, India</p>
+        </div>
+        <div class="exp-right">
+          <ul>
+            <li>Created NLP pipelines using LLMs for financial document automation.</li>
+            <li>Improved accuracy to 91% and reduced processing time by 90%.</li>
+            <li>Developed RAG-based financial data chatbot.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Synchrony -->
+      <div class="experience-card">
+        <div class="exp-left">
+          <img src="images/synchrony.jpg" alt="Synchrony" />
+          <h3>Data Science Intern — Synchrony</h3>
+          <p>Jan 2023 – June 2023</p>
+          <p>Bangalore, India</p>
+        </div>
+        <div class="exp-right">
+          <ul>
+            <li>Validated credit models using KS, GINI, PSI, and CSI metrics.</li>
+            <li>Built AI chatbot for sales support using LangGraph and RAG.</li>
+            <li>Automated document validation with SharePoint events.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HSBC -->
+      <div class="experience-card">
+        <div class="exp-left">
+          <img src="images/hsbc.jpg" alt="HSBC" />
+          <h3>Data Science Intern — HSBC Bank</h3>
+          <p>Aug 2022 – Dec 2022</p>
+          <p>Hyderabad, India</p>
+        </div>
+        <div class="exp-right">
+          <ul>
+            <li>Used Gradient Boosting and DBSCAN clustering to forecast ATM relocations.</li>
+            <li>Reduced operational cost by 6% and increased transactions by 22%.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Bar -->
+    <section id="social-bar">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+      </ul>
+      <p>© 2025 M Manoj Kumar | AI Engineer</p>
+    </section>
+
+    <!-- Floating Home Button -->
+    <a href="index.html" id="home-btn" title="Back to Home">
+      <i class="fa-solid fa-house"></i>
+    </a>
+  </body>
+</html>

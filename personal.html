@@ -1,62 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M Manoj Kumar - Personal</title>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Personal Life | M Manoj Kumar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Poppins', sans-serif;
+        color: #222;
+        background: #f8f9fb;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      #social-bar {
+        margin-top: auto;
+      }
+
+      /* Personal Section */
+      #personal {
+        padding: 4em 0;
+      }
+
+      #personal header {
+        text-align: center;
+        margin-bottom: 3em;
+      }
+
+      #personal header h2 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 0.4em;
+      }
+
+      #personal header p {
+        font-size: 1em;
+        color: #666;
+        font-weight: 400;
+      }
+
+      /* Card style like index */
+      .personal-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3em;
+      }
+
+      .personal-card {
+        background: #e9ecef;
+        border-radius: 1em;
+        padding: 2em 1.5em;
+        width: 230px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        color: #222;
+      }
+
+      .personal-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .personal-card .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 1.6em;
+        margin-bottom: 1em;
+        transition: transform 0.3s ease;
+      }
+
+      .personal-card:hover .icon {
+        transform: scale(1.1);
+      }
+
+      .icon.fitness { background: #28a745; } /* green */
+      .icon.photography { background: #ffc107; } /* yellow */
+      .icon.writing { background: #6f42c1; } /* purple */
+
+      .personal-card h3 {
+        font-size: 1.15em;
+        margin-bottom: 0.5em;
+      }
+
+      .personal-card p {
+        font-size: 0.9em;
+        color: #444;
+        line-height: 1.5em;
+      }
+
+      /* Social Bar */
+      #social-bar {
+        background: #0b0c10;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      #social-bar ul {
+        list-style: none;
+        display: inline-flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+
+      #social-bar a {
+        color: #ffffff;
+        font-size: 1.4em;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      #social-bar a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+      }
+
+      #social-bar p {
+        color: #aaa;
+        font-size: 0.85em;
+        margin-top: 0.8em;
+      }
+
+      /* Floating Home Button */
+      #home-btn {
+        position: fixed;
+        bottom: 1.5em;
+        left: 1.5em;
+        background: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      #home-btn:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .personal-grid {
+          gap: 1.5em;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+        .personal-card {
+          width: 80%;
         }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #007BFF;
-        }
-        nav a.active {
-            color: #007BFF;
-            border-bottom: 2px solid #007BFF;
-        }
-        section {
-            padding: 20px;
-            background-color: white;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
+      }
     </style>
-</head>
-<body>
-    <header>
-        <h1>M Manoj Kumar - Personal</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="career.html">Career</a>
-        <a href="education.html">Education</a>
-        <a href="personal.html" class = "active">Personal</a>
-        <a href="contact.html">Contact</a>
+  </head>
+  <body class="is-preload">
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="personal.html">Personal</a></li>
+      </ul>
     </nav>
-    <section>
-        <h2>Personal Information</h2>
-        <p>Details about your hobbies, interests, and other personal information.</p>
+
+    <!-- Personal Life Section -->
+    <article id="personal" class="wrapper style2">
+      <div class="container">
+        <header>
+          <h2>Personal Life</h2>
+          <p>Beyond AI, I’m driven by creativity, movement, and self-expression.</p>
+        </header>
+
+        <div class="personal-grid">
+          <div class="personal-card">
+            <span class="icon fitness"><i class="fa-solid fa-person-running"></i></span>
+            <h3>Fitness & Sports</h3>
+            <p>I’m passionate about staying active through table tennis, badminton, and running — recently completing a 10K marathon.</p>
+          </div>
+
+          <div class="personal-card">
+            <span class="icon photography"><i class="fa-solid fa-camera-retro"></i></span>
+            <h3>Photography</h3>
+            <p>Headed a photography club during my B.Tech, organized workshops and photowalks, capturing stories through light and perspective.</p>
+          </div>
+
+          <div class="personal-card">
+            <span class="icon writing"><i class="fa-solid fa-pen-nib"></i></span>
+            <h3>Writing</h3>
+            <p>Writing poetry and short stories gives me a creative outlet. I aim to publish free-verse poems exploring thought and emotion.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Social Bar -->
+    <section id="social-bar">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/mmanojkumar-data/" class="fa-brands fa-linkedin-in" title="LinkedIn"></a></li>
+        <li><a href="https://www.instagram.com/mmanojkumar-data" class="fa-brands fa-instagram" title="Instagram"></a></li>
+        <li><a href="mailto:mmanojkumar.data@gmail.com" class="fa-solid fa-envelope" title="Email"></a></li>
+        <li><a href="https://github.com/mmanojkumar-data" class="fa-brands fa-github" title="GitHub"></a></li>
+      </ul>
+      <p>© 2025 M Manoj Kumar | AI Engineer</p>
     </section>
-</body>
+
+    <!-- Floating Home Button -->
+    <a href="index.html" id="home-btn" title="Back to Home">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
