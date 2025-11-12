@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <style>
-      /* ✅ Page-specific styling only */
-
       html, body {
         margin: 0;
         padding: 0;
@@ -92,39 +90,78 @@
         line-height: 1.5em;
       }
 
-      /* Publications */
-      #publications {
+      /* Publications + Achievements Section */
+      #publications, #achievements {
         max-width: 900px;
         margin: 3em auto 4em;
         padding: 0 1em;
       }
 
-      #publications h2 {
+      #publications h2, #achievements h2 {
         text-align: center;
         font-size: 1.8em;
-        margin-bottom: 1.5em;
+        margin-bottom: 1.8em;
+        font-weight: 600;
       }
 
-      #publications ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      .entry-item {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 0.6em;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        padding: 1.2em 1.5em;
+        margin-bottom: 1.4em;
+        transition: 0.3s ease;
       }
 
-      #publications li {
-        margin-bottom: 1.2em;
+      .entry-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      }
+
+      .entry-icon {
+        flex: 0 0 50px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: #007bff;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4em;
+        margin-right: 1.2em;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      }
+
+      .entry-text {
+        flex: 1;
         line-height: 1.6em;
         color: #333;
       }
 
-      #publications a {
+      .entry-text a {
         color: #007bff;
         font-weight: 500;
         text-decoration: none;
       }
 
-      #publications a:hover {
+      .entry-text a:hover {
         text-decoration: underline;
+      }
+
+      .entry-text strong {
+        color: #007bff;
+        font-size: 1em;
+      }
+
+      .entry-text em {
+        color: #666;
+        font-style: normal;
+        display: block;
+        margin-top: 0.2em;
+        font-size: 0.9em;
       }
 
       /* Social Bar */
@@ -154,6 +191,12 @@
         transform: scale(1.2);
       }
 
+      #social-bar p {
+        color: #aaa;
+        font-size: 0.85em;
+        margin-top: 0.8em;
+      }
+
       /* Floating Home Button */
       #home-btn {
         position: fixed;
@@ -179,7 +222,7 @@
         transform: scale(1.1);
       }
 
-      /* Responsive cards */
+      /* Responsive */
       @media (max-width: 1024px) {
         .edu-card {
           width: 45%;
@@ -189,6 +232,15 @@
       @media (max-width: 768px) {
         .edu-card {
           width: 80%;
+        }
+
+        .entry-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .entry-icon {
+          margin: 0 0 0.8em 0;
         }
       }
     </style>
@@ -246,23 +298,29 @@
       </div>
     </section>
 
-    <!-- Publications -->
+    <!-- Publications Section -->
     <section id="publications">
       <h2>Research Publications</h2>
-      <ul>
-        <li>
-          <a href="https://www.tandfonline.com/doi/full/10.1080/17517575.2022.2028195" target="_blank">
-            A Data Analytic-based logistics modelling framework for E-commerce Enterprise
-          </a><br>
-          <em>Journal of Intelligent Manufacturing Systems, Taylor & Francis, 2022.</em>
-        </li>
 
-        <li>
-          <strong>Berth and Quay Crane Allocation Problem for the Container Handling</strong><br>
+      <div class="entry-item">
+        <div class="entry-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="entry-text">
+          <strong><a href="https://www.tandfonline.com/doi/full/10.1080/17517575.2022.2028195" target="_blank"></strong>
+            A Data Analytic-based logistics modelling framework for E-commerce Enterprise
+          </a>
+          <em>Journal of Intelligent Manufacturing Systems, Taylor & Francis, 2022.</em>
+        </div>
+      </div>
+
+      <div class="entry-item">
+        <div class="entry-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="entry-text">
+          <strong>Berth and Quay Crane Allocation Problem for the Container Handling</strong>
           <em>5th International Conference on Industrial Engineering (ICIE 2019), SVNIT Surat · Dec 14, 2019</em>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
+
 
     <!-- Social Bar -->
     <section id="social-bar">
@@ -280,7 +338,7 @@
       <i class="fa-solid fa-house"></i>
     </a>
 
-    <!-- ✅ Unified toggle script -->
+    <!-- ✅ Toggle Script -->
     <script>
       const menuToggle = document.getElementById("menu-toggle");
       const navMenu = document.querySelector("#nav ul");

@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-      /* Page-specific styling only */
-
       html, body {
         margin: 0;
         padding: 0;
@@ -114,22 +112,68 @@
         line-height: 1.6em;
       }
 
-      /* Responsive */
-      @media (max-width: 768px) {
-        .experience-card {
-          flex-direction: column;
-          text-align: center;
-        }
-        .exp-left {
-          width: 100%;
-          margin-bottom: 1.3em;
-        }
-        .exp-right {
-          padding-left: 0;
-        }
-        .exp-right ul {
-          text-align: left;
-        }
+      /* ✅ Achievements Section */
+      #achievements {
+        max-width: 900px;
+        margin: 3em auto 4em;
+        padding: 0 1em;
+      }
+
+      #achievements h2 {
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 2em;
+      }
+
+      .award-item {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 0.6em;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        padding: 1.2em 1.5em;
+        margin-bottom: 1.4em;
+        transition: 0.3s ease;
+      }
+
+      .award-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      }
+
+      .award-icon {
+        flex: 0 0 50px;
+        height: 50px;
+        width: 50px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4em;
+        margin-right: 1.2em;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      }
+
+      .award-text strong {
+        color: #007bff;
+        font-size: 1em;
+      }
+
+      .award-text em {
+        color: #666;
+        font-style: normal;
+        display: block;
+        margin-top: 0.2em;
+        font-size: 0.9em;
+      }
+
+      .award-text {
+        flex: 1;
+        line-height: 1.6em;
+        color: #333;
       }
 
       /* Social Bar */
@@ -188,12 +232,39 @@
         background: #0056b3;
         transform: scale(1.1);
       }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .experience-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .exp-left {
+          width: 100%;
+          margin-bottom: 1.3em;
+        }
+
+        .exp-right {
+          padding-left: 0;
+        }
+
+        .award-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .award-icon {
+          margin-right: 0;
+          margin-bottom: 0.8em;
+        }
+      }
     </style>
   </head>
 
   <body class="is-preload">
 
-    <!-- ✅ Navigation (same as index/personal/education) -->
+    <!-- ✅ Navigation -->
     <nav id="nav">
       <div id="menu-toggle" class="toggle">
         <span></span>
@@ -284,6 +355,27 @@
       </div>
     </section>
 
+    <!-- ✅ Achievements Section with icons -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+
+      <div class="award-item">
+        <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+        <div class="award-text">
+          <strong>Rising Star Award — Q4 2024 · Centific</strong>
+          <em>Certificate of Recognition for excellence in work · Apr 2025</em>
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
+        <div class="award-text">
+          <strong>Blue Ribbon Award — Q1 2024 · FactSet</strong>
+          <em>Certificate of Recognition for outstanding performance · Jun 2024</em>
+        </div>
+      </div>
+    </section>
+
     <!-- Social Bar -->
     <section id="social-bar">
       <ul>
@@ -300,7 +392,6 @@
       <i class="fa-solid fa-house"></i>
     </a>
 
-    <!-- ✅ Unified toggle JS -->
     <script>
       const menuToggle = document.getElementById("menu-toggle");
       const navMenu = document.querySelector("#nav ul");
